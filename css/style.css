@@ -1,0 +1,149 @@
+*{
+    box-sizing:border-box
+}
+html,body{
+    margin:0;
+    background:#0b0a08;
+    color:#b9b2a2;
+    font-family:'Cinzel',Georgia,serif;
+    color-scheme:dark
+}
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    overflow:hidden;
+    padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)
+}
+canvas{
+    width:100%;
+    max-width:900px;
+    aspect-ratio:9/5;
+    border:1px solid #3a3122;
+    background:#14110d;
+    cursor:crosshair
+}
+.help{
+    margin:0;
+    font-size:13px;
+    text-align:center;
+    padding:0 12px
+}
+b{
+    color:#d8b45a
+}
+#ov{
+    position:fixed;
+    inset:0;
+    background:rgba(8,7,5,.96);
+    overflow:auto;
+    padding:max(20px,env(safe-area-inset-top,0)) 16px 40px;
+    display:flex;
+    flex-direction:column;
+    align-items:center
+}
+#ov[hidden]{
+    display:none
+}
+#ov>*{
+    width:100%;
+    max-width:760px
+}
+h1{
+    color:#d8b45a;
+    text-align:center;
+    letter-spacing:.08em;
+    font-size:34px;
+    margin:10px 0 14px
+}
+.gold{
+    color:#f0c850
+}
+.bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px
+}
+button{
+    font:inherit;
+    background:#1c1710;
+    color:#d8c9a0;
+    border:1px solid #5a4a2a;
+    padding:8px 12px;
+    cursor:pointer
+}
+button:hover:not(:disabled){
+    background:#2c2415;
+    border-color:#d8b45a
+}
+button:disabled{
+    opacity:.4;
+    cursor:default
+}
+button:focus-visible{
+    outline:2px solid #d8b45a
+}
+.tabs{
+    display:flex;
+    gap:8px;
+    margin-bottom:10px
+}
+.tabs button{
+    flex:1
+}
+.tabs .on{
+    border-color:#d8b45a;
+    color:#d8b45a
+}
+.list{
+    display:grid;
+    gap:6px
+}
+.list>button{
+    display:flex;
+    justify-content:space-between;
+    text-align:left
+}
+small{
+    color:#8a8070;
+    margin-left:8px
+}
+.note{
+    text-align:center;
+    color:#a89a78;
+    font-size:14px;
+    margin:6px 0
+}
+.it{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+    border:1px solid;
+    padding:8px 10px;
+    background:#14110d
+}
+.it span{
+    display:block;
+    font-size:13px
+}
+.acts{
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:8px
+}
+.it .acts{
+    margin:0
+}
+.acts button{
+    font-size:12px;
+    padding:6px 8px
+}
