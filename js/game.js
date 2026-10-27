@@ -82,7 +82,7 @@ const card=i=>`<div><b style="color:${RAR[i.r][1]}">${i.n}</b><small>${RAR[i.r][
 let state='menu',P,B,cur,ST,zones=[],shots=[],fx=[],shake=0,msg='',msgT=0;
 function menu(){state='menu';ov.hidden=false;const m=S.tab==='m',L=m?MAIN:OPT,
  lock=b=>m?L.indexOf(b)>0&&!S.def[L[L.indexOf(b)-1].n]:!S.def[MAIN[0].n],cnt=l=>l.filter(b=>S.def[b.n]).length;
- ov.innerHTML=`<h1>Anel de Cinzas</h1><div class="bar"><span>Runas: <b>${S.runes}</b> · Abatidos: <b>${cnt(ALL)}/${ALL.length}</b></span><button data-a="inv">Equipamentos</button></div>
+ ov.innerHTML=`<h1>Elden Ring na web</h1><div class="bar"><span>Runas: <b>${S.runes}</b> · Abatidos: <b>${cnt(ALL)}/${ALL.length}</b></span><button data-a="inv">Equipamentos</button></div>
  <div class="tabs"><button data-a="tab" data-v="m" class="${m?'on':''}">Principais (${cnt(MAIN)}/${MAIN.length})</button><button data-a="tab" data-v="o" class="${m?'':'on'}">Opcionais (${cnt(OPT)}/${OPT.length})</button></div>
  ${!m&&lock(OPT[0])?'<p class="note">Derrote Margit para liberar os chefes opcionais.</p>':''}${m?'<p class="note">Os chefes principais são liberados em sequência.</p>':''}
  <div class="list">${L.map(b=>`<button data-a="go" data-n="${b.n}" ${lock(b)?'disabled':''}><span>${S.def[b.n]?'✔ ':''}${b.n}</span><small>Nv ${b.l}</small></button>`).join('')}</div>`}
